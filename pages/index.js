@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from '../components/head';
-import Nav from '../components/nav';
+import Head from '../components/dumb/Head';
+import Nav from '../components/dumb/Nav';
 
 const Home = () => (
   <div>
@@ -9,10 +9,8 @@ const Home = () => (
     <Nav />
 
     <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+      <h1 className="title">Welcome to Banker!</h1>
+      <p className="description">Create or choose a stash to get started!</p>
 
       <div className="row">
         <Link href="https://github.com/zeit/next.js#getting-started">
