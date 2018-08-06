@@ -24,6 +24,7 @@ class DBConnect extends PureComponent {
       .createTable('Stash')
       .addColumn('StashId', lf.Type.STRING)
       .addColumn('StashName', lf.Type.STRING)
+      .addColumn('Desc', lf.Type.STRING)
       .addColumn('Date', lf.Type.DATE_TIME)
       .addPrimaryKey(['StashId']);
 

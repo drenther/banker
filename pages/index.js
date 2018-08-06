@@ -1,12 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+
 import Head from '../components/dumb/Head';
 import Nav from '../components/dumb/Nav';
+
+import CreateStash from '../components/smart/CreateStash';
 
 const Home = () => (
   <div>
     <Head title="Banker | Welcome" />
     <Nav />
+
+    <CreateStash />
 
     <div className="hero">
       <h1 className="title">Welcome to Banker!</h1>
@@ -23,8 +28,7 @@ const Home = () => (
           <a className="card">
             <h3>Examples &rarr;</h3>
             <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
+              Find other example boilerplates on the <code>create-next-app</code> site
             </p>
           </a>
         </Link>

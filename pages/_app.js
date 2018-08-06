@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import DBContainer from '../state/db-container';
 
 /**
- *  skip SSR for this component because it import lovefield which needs access to window object
+ *  skip SSR for this component because it imports lovefield which needs access to window object
  */
 const DBConnect = dynamic(import('../components/smart/DBConnect'));
 
@@ -17,9 +17,7 @@ class CustomApp extends App {
       <Container>
         <Provider>
           <Subscribe to={[DBContainer]}>
-            {({ state: { dbConnected }, connectDB }) => (
-              <DBConnect connect={connectDB} connected={dbConnected} />
-            )}
+            {({ state: { dbConnected }, connectDB }) => <DBConnect connect={connectDB} connected={dbConnected} />}
           </Subscribe>
           <Component {...pageProps} />
         </Provider>
